@@ -9,8 +9,8 @@ class Loader {
         $this->urlValues = $_GET;
         
         if ($this->urlValues['controller'] == "") {
-            $this->controllerName = "home";
-            $this->controllerClass = "HomeController";
+            $this->controllerName = "explorer";
+            $this->controllerClass = "ExplorerController";
         } else {
             $this->controllerName = strtolower($this->urlValues['controller']);
             $this->controllerClass = ucfirst(strtolower($this->urlValues['controller'])) . "Controller";
