@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?=Config::$BASE_URL?>/assets/css/bootstrap.css" rel="stylesheet">
     <style>
       body { padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */ }
     </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<?=Config::$BASE_URL?>/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
     </script>
@@ -20,7 +20,7 @@
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="<?=$BASE_URL?>">
+          <a class="brand" href="<?=Config::$BASE_URL?>">
             PHPCassAdmin
           </a>
           <ul class="nav">
