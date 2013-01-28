@@ -20,7 +20,7 @@
       ?>
         <div class="well well-small">
           <h4>
-            <a href="#"><?= $key; ?></a>
+            <?= $key; ?>
           </h4>
           <?php     
           foreach($columns as $name => $value) {
