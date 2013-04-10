@@ -2,7 +2,7 @@
 //PHPCassaAutoload
 require_once(__DIR__.'/lib/autoload.php');
 
-require("config/Config.php");
+require("config/config.php");
 require("classes/basecontroller.php");  
 require("classes/basemodel.php");
 require("classes/view.php");
