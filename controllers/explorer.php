@@ -63,7 +63,7 @@ class ExplorerController extends BaseController
         $this->model->setColumnFamilyName($columnFamily);
 
         //Get Column Family list
-        $sys = new SystemManager('127.0.0.1');
+        $sys = new SystemManager(Config::$CASSANDRA_HOST);
         $ksdef = $sys->describe_keyspace($keyspace);
         $columnFamilyList = array();
         foreach ($ksdef->cf_defs as $cf){
@@ -72,7 +72,7 @@ class ExplorerController extends BaseController
         $this->model->setColumnFamilyList($columnFamilyList);
 
 
-        $pool = new ConnectionPool($keyspace, array('127.0.0.1'));
+        $pool = new ConnectionPool($keyspace, array(Config::$CASSANDRA_HOST));
         $content = new ColumnFamily($pool, $columnFamily);
         $rows = $content->get_range("", "", 1000);
         $rowkey = array();
